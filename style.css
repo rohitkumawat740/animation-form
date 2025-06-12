@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    background: #0d1351;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.circle-animation{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-animation span{
+    position: absolute;
+    width: 32px;
+    height: 6px;
+    background: #070b33;
+    border-radius: 8px;
+    transform: scale(2.2) rotate(calc(var(--i) *
+    (360deg / 50)));
+    transform-origin: 130px;
+    margin-right: 235px;
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+@keyframes animateBlink{
+   0%{
+    background: #0ef;
+   }
+   25%{
+    background: #070b33;
+   }
+}
+.form-box{
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    position: absolute;
+}
+.form-box h2{
+    text-align: center;
+    color: #0ef;
+    font-size: 30px;
+    font-weight: bold;
+}
+.input-box{
+    position: relative;
+    margin-bottom: 65px;
+}
+.input-box input{ 
+    width: 70%;
+    height: 40px;
+    border-radius: 40px;
+    padding:5px 10px;
+    border: 2px solid #2c4766; 
+    margin-left: 60px;
+    background: transparent;
+    margin-top: 25px;
+    position: absolute;
+    outline: none;
+    color: white;
+}
+.input-box input:hover{
+    border: 2px solid #0ef;
+}
+.input-box label{
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    pointer-events: none;
+    transition: 0.4s ease all;
+    margin-left: 75px;
+    font-weight: bold;
+    margin-top: 35px;
+   }
+ .input-box input:focus~label,
+ .input-box input:valid~label{
+    margin-top: 15px;
+    font-size: 15px;
+    background: #0d1351;
+    padding: 0 6px;
+    color: #0ef;
+    border-color: #0ef;
+ }
+ .forgot{
+    display: flex;
+    margin-left: 117px;
+    margin-top: 73px;
+ }
+ .forgot a{
+    margin-top: 70px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+ }
+ .forgot a:hover{
+    text-decoration: underline white;
+    color: #0ef;
+ }
+ .btn{
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 60px;
+    border-radius: 40px;
+    border: none;
+    background: #0ef;
+    color: #0d1351;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+ }
+ .signup-link{
+    margin-left: 170px;
+    margin-top: 20px;
+ }
+ .signup-link a{
+    text-decoration: none;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: bold;
+ }
